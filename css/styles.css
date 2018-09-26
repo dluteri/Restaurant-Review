@@ -260,7 +260,7 @@ select:focus-within, select:hover  {
   width: 45%;
 }
 #restaurant-name {
-  color: #6A9BC3;
+  color: #32597C;
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -305,7 +305,7 @@ select:focus-within, select:hover  {
   flex-direction: column;
 }
 #reviews-container h2 {
-  color: #6A9BC3;
+  color: #32597C;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
