@@ -51,3 +51,5 @@ self.addEventListener('fetch', function(event) {
         })
     );
 }); 
+
+// Service worker code help from Matthew Cranford's walkthrough
