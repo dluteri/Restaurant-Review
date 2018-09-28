@@ -157,9 +157,10 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.name + 'Restaurant'; //per 1st review
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('header'); // changed 'h1' to 'header' per 1st review
   name.innerHTML = restaurant.name;
   li.append(name);
 
