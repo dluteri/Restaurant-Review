@@ -2,43 +2,52 @@
 /* CSS Document */
 
 body,td,th,p{
+	color: #333;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
-	color: #333;
 	line-height: 1.5;
 }
+
 body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
 }
+
 ul, li {
+	color: #333;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
-	color: #333;
 }
+
 a {
 	color: #6a9bc3;
 	text-decoration: none;
 }
+
 a:hover, a:focus {
 	color: #3397db;
 	text-decoration: none;
 }
+
 a img{
 	border: none 0px #fff;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
+
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: grid;
 }
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
 }
+
 #footer {
   background-color: #444;
   color: #aaa;
@@ -52,7 +61,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 strong {
   color: orangered;
 }
+
 /* ====================== Navigation ====================== */
+
 nav {
   align-items: center;
   background-color: #252831;
@@ -61,9 +72,11 @@ nav {
   text-align: center;
   width: 100%;
 }
+
 nav h1 {
   margin: auto;
 }
+
 nav h1 a {
   color: #fff;
   font-size: 14pt;
@@ -71,17 +84,14 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-#breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
-    width: calc(50% - 80px);
 
-   // display: grid;
-   // grid-column: 1/2;
-   // text-align: start;
+#breadcrumb {
+  background-color: #eee;
+  font-size: 17px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 40px 16px;
+  width: calc(50% - 80px);
 }
 
 /* Display list items side by side */
@@ -91,9 +101,9 @@ nav h1 a {
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+  color: black;
+  content: "/\00a0";
+  padding: 8px;
 }
 
 /* Add a color to all links inside the list */
@@ -108,23 +118,26 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
+
 #map {
   height: 400px;
   width: 100%;
   background-color: #ccc;
 }
+
 /* ====================== Restaurant Filtering ====================== */
+
 .filter-options {
-  width: 100%;
-  height: 50px;
-  background-color: #6A9BC3;
   align-items: center;
+  background-color: #6A9BC3;
   display: grid;
   grid-template-columns: 10.1em 15em 15em;
   grid-gap: 1em; 
+  height: 50px;
   padding-left: 15em;
-  
+  width: 100%;
 }
+
 .filter-options h2 {
   color: white;
   font-size: 1rem;
@@ -132,6 +145,7 @@ nav h1 a {
   line-height: 1;
   margin: 0 20px;
 }
+
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
@@ -147,21 +161,22 @@ nav h1 a {
 select:focus-within, select:hover  {
   border: 4px solid gold;
 }
+
 /* ====================== Restaurant Listing ====================== */
+
 #restaurants-list {
   background-color: #f3f3f3;
+	display: flex;
   list-style: outside none none;
+	flex-direction: row;
+	flex-flow: wrap;
+  justify-content: center;
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
   width: 100%;
-
-	display: flex;
-	flex-direction: row;
-	flex-flow: wrap;
-  justify-content: center;
-  
 }
+
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -169,11 +184,10 @@ select:focus-within, select:hover  {
   margin: 15px;
   min-height: 380px;
   padding: 0 30px 25px;
-  
-  width: 270px;
   text-align: center;
-
+  width: 270px;
 }
+
 #restaurants-list .restaurant-img {
   background-color: #ffffff;
   display: block;
@@ -181,10 +195,10 @@ select:focus-within, select:hover  {
   max-width: 100%;
   min-height: 100px;
   min-width: 100%;
-
   padding-top: 3%;
   text-align: center;
 }
+
 #restaurants-list li h1 {
   color: #32597c;  
   font-family: Arial,sans-serif;
@@ -202,8 +216,8 @@ select:focus-within, select:hover  {
 #restaurants-list p {
   font-size: 11pt;
   margin: 0;
- 
 }
+
 #restaurants-list li a {
   background-color: #6A9BC3;
   border-bottom: 3px solid #eee;
@@ -215,7 +229,6 @@ select:focus-within, select:hover  {
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
-
   text-transform: uppercase;
 }
 
@@ -227,6 +240,7 @@ select:focus-within, select:hover  {
 
 
 /* ====================== Restaurant Details ====================== */
+
 .inside header {
   position: fixed;
   top: 0;
@@ -254,6 +268,7 @@ select:focus-within, select:hover  {
   position: absolute;
   width: 100%;
 }
+
 #restaurant-name {
   align-content: center;
   border-radius: 5px;
@@ -261,20 +276,22 @@ select:focus-within, select:hover  {
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
-  //height: 30px;
   letter-spacing: 0;
+  line-height: 1.1;
   margin: 15px 0 30px;
   padding-top: 5px;
   text-transform: uppercase;
-  line-height: 1.1;
 }
+
 #restaurant-img {
 	width: 90%;
 }
+
 #restaurant-address {
   font-size: 12pt;
   margin: 10px 0px;
 }
+
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
@@ -287,15 +304,18 @@ select:focus-within, select:hover  {
   text-transform: uppercase;
 	width: 90%;
 }
+
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 100px 25px;
   width: 50%;
 }
+
 #reviews-container {
   padding: 30px 40px 80px;
 }
+
 #reviews-container h2 {
   color: #32597C;
   font-size: 24pt;
@@ -303,10 +323,12 @@ select:focus-within, select:hover  {
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
+
 #reviews-list {
   margin: 0;
   padding: 0;
 }
+
 #reviews-list li {
   background-color: #fff;
   border: 2px solid #f3f3f3;
@@ -319,15 +341,13 @@ select:focus-within, select:hover  {
   width: 75%;
 }
 
-
 #reviews-list li p {
   margin: 0 0 10px;
 }
+
 #restaurant-hours td {
   color: #666;
 }
-
-
 
 /* ------------- Media Queries -----------------*/
 
@@ -335,8 +355,8 @@ select:focus-within, select:hover  {
   header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     font-size: 12pt;
+    justify-content: center;
   }
 
 	.filter {
@@ -345,14 +365,18 @@ select:focus-within, select:hover  {
 	}
 	.filter-header {
 		padding-top: 0;
-		width: 135px;
 		text-align: left;
+		width: 135px;
 	}
 	.filter-options {
+    display: flex;
+    flex-direction: column;
+    font-size: 12pt;
+    height: fit-content;
+    justify-content: center;
     margin: 0;
-    padding-left: 1em;
-    display: grid;
-    grid-template-columns: 1em;
+    padding-left: .5em;
+    padding-top: 5px;
 	}
 
   #restaurants-list {
@@ -360,7 +384,6 @@ select:focus-within, select:hover  {
   }
 
   #restaurants-list li {
-    //width: 350px;
     justify-content: center;
     margin: 0;
   }
@@ -378,24 +401,25 @@ select:focus-within, select:hover  {
 
   }
   header #breadcrumb {
+    height: 1.5em;
     order: 1;
-    width: 100vw;
     padding-right: 0;
     padding-left: 0;
     text-align: center;
-    height: 1.5em;
+    width: 100vw;
   }
 
-  
   .inside {
     display: flex;
     flex-direction: row;
     width: 100%;
   }
+
   .inside header {
     order: 0;
     width: 80vw;
   }
+
   .inside #map-container {
     order: 2;
     top: 130px;
@@ -403,18 +427,19 @@ select:focus-within, select:hover  {
     height: 300px;
     width: 100vw;
   }
+
   .inside #restaurant-container {
-    order: 3;
-    position: relative;
-    width: 80vw;
-    padding: 140px 5px 0 0;
     margin: 1em;
+    order: 3;
+    padding: 140px 5px 0 0;
+    position: relative;
     text-align: center;
+    width: 80vw;
   }
 
   #restaurant-name {
-    position: relative;
     height: 20px;
+    position: relative;
     width: 80vw;
   }
 
@@ -423,6 +448,7 @@ select:focus-within, select:hover  {
     padding: 5px;
     margin: auto;
   }
+
   .inside #footer {
     order: 4;
     width: 100vw;
@@ -431,9 +457,11 @@ select:focus-within, select:hover  {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
   #reviews-list {
     width: 100vw;
   }
+
   #reviews-container h2 {
     text-align: center;
   }
