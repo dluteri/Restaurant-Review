@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body,td,th,p{
 	color: #333;
 	font-family: Arial, Helvetica, sans-serif;
@@ -11,7 +15,10 @@ body,td,th,p{
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+  position:relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 ul, li {
@@ -39,13 +46,26 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: grid;
+article, 
+aside, 
+canvas, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section {
+	display: block;
 }
 
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #footer {
@@ -120,7 +140,7 @@ nav h1 a {
 /* ====================== Map ====================== */
 
 #map {
-  height: 400px;
+  height: 600px;
   width: 100%;
   background-color: #ccc;
 }
@@ -134,8 +154,8 @@ nav h1 a {
   grid-template-columns: 10.1em 15em 15em;
   grid-gap: 1em; 
   height: 50px;
-  padding-left: 15em;
   width: 100%;
+  justify-content: center;
 }
 
 .filter-options h2 {
@@ -174,7 +194,6 @@ select:focus-within, select:hover  {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
-  width: 100%;
 }
 
 #restaurants-list li {
@@ -250,17 +269,18 @@ select:focus-within, select:hover  {
 
 .inside #map-container {
   background-color: #ccc;
-  height: 87%;
+  height: 200px;
   position: fixed;
   right: 0;
   top: 80px;
-  width: 50%;
+  width: 100%;
 }
 
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
+  z-index: 999;
 }
 
 .inside #footer {
@@ -284,7 +304,7 @@ select:focus-within, select:hover  {
 }
 
 #restaurant-img {
-	width: 90%;
+	width: 100%;
 }
 
 #restaurant-address {
@@ -302,18 +322,18 @@ select:focus-within, select:hover  {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+	width: 100%;
 }
 
-#restaurant-container, #reviews-container {
+section#restaurant-container, section#reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 100px 25px;
-  width: 50%;
-}
-
-#reviews-container {
-  padding: 30px 40px 80px;
+  padding: 20px 10px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 #reviews-container h2 {
@@ -334,11 +354,11 @@ select:focus-within, select:hover  {
   border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
+  margin: 15px auto;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 20px;
   position: relative;
-  width: 75%;
+  width: 90%;
 }
 
 #reviews-list li p {
@@ -347,6 +367,14 @@ select:focus-within, select:hover  {
 
 #restaurant-hours td {
   color: #666;
+}
+
+#restaurant-hours td:nth-child(odd) {
+  width: 50%;
+}
+
+#restaurant-hours td:nth-child(even) {
+  width: 50%;
 }
 
 /* ------------- Media Queries -----------------*/
@@ -366,26 +394,27 @@ select:focus-within, select:hover  {
 	.filter-header {
 		padding-top: 0;
 		text-align: left;
-		width: 135px;
-	}
+  }
+  
 	.filter-options {
     display: flex;
     flex-direction: column;
     font-size: 12pt;
-    height: fit-content;
     justify-content: center;
     margin: 0;
-    padding-left: .5em;
-    padding-top: 5px;
+    padding: 5px 0;
+    height: 130px;
 	}
 
   #restaurants-list {
-    width: 290px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 0;
   }
 
   #restaurants-list li {
-    justify-content: center;
-    margin: 0;
+    justify-self: center;
   }
 }
 
@@ -398,8 +427,8 @@ select:focus-within, select:hover  {
   }
   header nav {
     order: 0;
-
   }
+
   header #breadcrumb {
     height: 1.5em;
     order: 1;
@@ -417,7 +446,6 @@ select:focus-within, select:hover  {
 
   .inside header {
     order: 0;
-    width: 80vw;
   }
 
   .inside #map-container {
@@ -429,7 +457,7 @@ select:focus-within, select:hover  {
   }
 
   .inside #restaurant-container {
-    margin: 1em;
+    margin: 0 auto;
     order: 3;
     padding: 140px 5px 0 0;
     position: relative;
